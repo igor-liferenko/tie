@@ -1,6 +1,11 @@
 @x
-    while (k<=inp_desc->buffer_end && (c=getc(fp)) != EOF && c!='\n')
+        if ((*(k++) = c) != ' ') inp_desc->limit = k;
 @y
-    while (k<=inp_desc->buffer_end && (c=getc(fp)) != EOF && c!='\n')
+        { *(k++) = c; inp_desc->limit = k; }
+@z
+
+@x
+        if ((*(k++) = c) != ' ') inp_desc->limit = k;
+@y
         { *(k++) = c; inp_desc->limit = k; }
 @z
